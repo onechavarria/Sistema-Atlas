@@ -15,4 +15,4 @@ BACKEND/uploads/**
 !BACKEND/uploads/.gitkeep
 *.pem
 *.key
-*.crt
+
