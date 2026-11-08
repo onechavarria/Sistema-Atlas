@@ -1,0 +1,17 @@
+{
+  "name": "sistema-atlas",
+  "version": "1.1.0",
+  "private": true,
+  "description": "Sistema Atlas: gestion de empresas, clientes, contratos y auditoria",
+  "engines": {
+    "node": ">=22 <25"
+  },
+  "scripts": {
+    "postinstall": "npm install --prefix BACKEND --omit=dev",
+    "dev": "npm run dev --prefix BACKEND",
+    "dev:frontend": "npm run dev --prefix FRONTEND -- --host 0.0.0.0 --port 3350",
+    "build": "npm install --prefix FRONTEND --include=dev && npm run build --prefix FRONTEND",
+    "start": "node BACKEND/src/app.js",
+    "check": "node --check BACKEND/src/app.js && node --check BACKEND/src/db.js"
+  }
+}

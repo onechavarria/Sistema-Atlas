@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: "Poppins", "Arial", "sans-serif";
+  font-size: 14px; /* Reducido de 14px (default) a 12px (2pt menos) */
+  line-height: 1.5;
+  font-weight: 400;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html{
+  background-color: #f2f2f2;
+}
+
+/* Atlas: mobile-first constraints */
+html, body, #root { width: 100%; min-width: 0; min-height: 100%; margin: 0; }
+body { overflow-x: hidden; }
+*, *::before, *::after { box-sizing: border-box; }
+.MuiTableContainer-root { max-width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+.MuiCard-root, .MuiPaper-root { min-width: 0; }
+@media(max-width: 600px) {
+  .MuiTypography-h4 { font-size: 1.55rem !important; overflow-wrap: anywhere; }
+  .MuiTypography-h5 { font-size: 1.25rem !important; }
+  .MuiDialog-paper { max-width: calc(100% - 24px) !important; margin: 12px !important; }
+}
